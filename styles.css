@@ -150,6 +150,9 @@ body {
     scale: .90;
     border-radius: 20px;
 }
+.slide02 {
+    padding: 30px 100px;
+}
 
 
 
@@ -157,11 +160,14 @@ body {
 [class*="star"] {
     position: absolute;
     bottom: 70px;
-    animation-name: o;
-    animation-duration: 100s;
+    animation: spin 60s;
 }
 
-[class^="slide02__star0"], [class^="slide02__star0"]::before, [class^="slide02__star0"]::after {
+[class*="star02"] {
+    animation: spin 60s reverse;
+}
+
+[class*="star"], [class*="star"]::before, [class*="star"]::after {
     display: inline-block;
     height: 100px;
     width: 40px;
@@ -171,25 +177,25 @@ body {
     left: 20px;
 }
 
-[class^="slide02__star0"]::before, [class^="slide02__star0"]::after {
+[class*="star"]::before, [class*="tar"]::after {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
 }
 
-[class^="slide02__star0"]::before {
+[class*="star"]::before {
     rotate: 120deg;
 }
 
-[class^="slide02__star0"]::after {
+[class*="star"]::after {
     rotate: 240deg;
 }
 
 
 
 /*   ::: ANIMATIONS ::: */
-@keyframes o {
+@keyframes spin {
     from {
         transform: rotate(0);
     }

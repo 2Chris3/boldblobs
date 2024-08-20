@@ -1,0 +1,51 @@
+/*   ::: RESET :::   */
+:where(html, body, header, main, footer, section, article, figure, img, a) {
+    width: 100%;
+}
+
+:where(html) {
+    background: #ececec;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+:where(img) {
+    object-fit: cover;
+}
+
+:where(*) {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:where(button, input, fieldset) {
+    border: none;
+    appearance: none;
+}
+
+:where(input::-webkit-search-cancel-button) {
+    display: none;
+}
+
+:where(fieldset, figure) {
+    display: flex;
+    justify-content: center;
+}
+
+:where(ul, ol) {
+    list-style: none;
+}
+
+:where(li) {
+    text-indent: 0;
+}
+
+:where(a) {
+    text-decoration: none;
+    color: black;
+}
+
+:where(a:visited) {
+    color: black;
+}

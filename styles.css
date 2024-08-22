@@ -141,17 +141,29 @@ img {
 body {
     height: 100%;
 }
-.slide {
-    overflow: auto;
+/* .slide {
+    display: flex;
+    overflow: scroll;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+} */
+
+.slide::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
 }
+
 .slide01 {
-    padding: 30px 100px;
+    padding: 30px 100px 30px 100px;
     height: 100%;
     scale: .90;
     border-radius: 20px;
+    position: relative;
+    top: 0
 }
 .slide02 {
     padding: 30px 100px;
+    scale: .8;
 }
 
 

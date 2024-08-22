@@ -137,6 +137,7 @@
     font-size: 150px;
     line-height: 150px;
     font-weight: 100;
+    transition: 300ms;
 }
 
 
@@ -289,21 +290,6 @@ body {
     }
 }
 
-/* spin */
-.slide03:hover .card{
-    animation: popUp 3s forwards;
-}
-
-@keyframes popUp {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-[class*="card"]:hover {
-    color: red;
+.card__title:hover {
+    scale: 0.9;
 }

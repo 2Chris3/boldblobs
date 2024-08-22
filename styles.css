@@ -51,7 +51,6 @@
     --yellow: #ffd90c;
     --kaki: #f1ece5;
 }
-
 .violet {
     color: var(--blueViolet);
 }
@@ -81,6 +80,9 @@
 }
 .kaki-bg {
     background-color: var(--kaki);
+}
+.black-bg {
+    background-color: #000000;
 }
 
 
@@ -127,12 +129,23 @@
 .slide02__title {
     font-size: 210px;
 }
+.slide03__title {
+    font-size: 80px;
+    margin: 0 0 100px 80px;
+}
+.card__title {
+    font-size: 150px;
+    line-height: 150px;
+    font-weight: 100;
+}
+
+
 
 
 /*   ::: IMAGES :::   */
 img {
     border-radius: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 
@@ -148,22 +161,53 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none; 
 } */
-
-.slide::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
-}
-
+/* .slide::-webkit-scrollbar {
+    display: none;
+} */
 .slide01 {
-    padding: 30px 100px 30px 100px;
+    padding: 0 10px 168px 10px;
     height: 100%;
     scale: .90;
     border-radius: 20px;
     position: relative;
-    top: 0
+    top: 0;
 }
 .slide02 {
-    padding: 30px 100px;
-    scale: .8;
+    padding: 0 100px;
+    margin-bottom: 230px;
+}
+.card {
+    height: 280px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.slide03__grid {
+    display: grid;
+    grid-template-areas: 
+                        "k y ."
+                        "g p v";
+}
+.gird-area01 {
+    grid-area: k;
+}
+.gird-area02 {
+    grid-area: y;
+}
+.gird-area03 {
+    grid-area: g;
+}
+.gird-area04 {
+    grid-area: p;
+}
+.gird-area05 {
+    grid-area: v;
+}
+.card__description {
+    font-size: 36px;
+    font-weight: 100;
 }
 
 
@@ -172,13 +216,8 @@ body {
 [class*="star"] {
     position: absolute;
     bottom: 70px;
-    animation: spin 60s;
+    animation: spin 60s reverse linear;
 }
-
-[class*="star02"] {
-    animation: spin 60s reverse;
-}
-
 [class*="star"], [class*="star"]::before, [class*="star"]::after {
     display: inline-block;
     height: 100px;
@@ -188,18 +227,15 @@ body {
     position: relative;
     left: 20px;
 }
-
 [class*="star"]::before, [class*="tar"]::after {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
 }
-
 [class*="star"]::before {
     rotate: 120deg;
 }
-
 [class*="star"]::after {
     rotate: 240deg;
 }
@@ -215,8 +251,7 @@ body {
         transform: rotate(1350deg);
     }
 }
-
-@-moz-keyframes o {
+@-moz-keyframes spin {
     from {
         transform: rotate(0);
     }
@@ -224,8 +259,7 @@ body {
         transform: rotate(1360deg);
     }
 }
-
-@-webkit-keyframes o {
+@-webkit-keyframes spin {
     from {
         transform: rotate(0);
     }
